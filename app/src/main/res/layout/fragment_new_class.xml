@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:paddingTop="10dp"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:paddingBottom="15dp"
+    android:background="@color/md_white_1000">
+
+
+    <EditText
+        android:id="@+id/editText4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="15dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        android:fontFamily="@font/gothic"
+        android:hint="Class Name"
+
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtlable"
+        android:text="Class Name"
+        android:layout_below="@id/editText4"
+        android:background="@color/md_white_1000"
+        android:textColor="@color/md_blue_500"
+        android:padding="5dp"
+        android:fontFamily="@font/gothic"
+        android:layout_margin="10dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/editText4"
+        android:background="@color/md_white_1000"
+        android:textColor="@color/md_blue_500"
+        android:padding="5dp"
+        android:id="@+id/txtlable1"
+        android:fontFamily="@font/gothic"
+        android:layout_margin="10dp"
+        android:text="No.of Students"
+        />
+    <ListView
+        android:id="@+id/news_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:padding="@dimen/space_4"
+        android:paddingBottom="@dimen/space_16"
+        android:layout_below="@id/txtlable"
+        android:layout_marginBottom="10dp"
+        android:layout_above="@+id/txttotal"
+
+        />
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"/>
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0sp"
+        android:visibility="invisible"
+        android:maxLines="5"
+        android:singleLine="false"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/txttotal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:textSize="@dimen/font_h6_size"
+        android:fontFamily="@font/gothic"
+        android:background="@color/md_red_900"
+        android:textColor="@color/md_white_1000"
+        android:text="Total"
+        />
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/fab"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/ic_add_circle_black_24dp"
+        >
+
+    </android.support.design.widget.FloatingActionButton>
+</RelativeLayout>
