@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/scrolview1"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#e0e0e0">
+
+        <TextView
+            android:id="@+id/txtinfo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+
+            android:layout_marginTop="13dp"
+            android:background="#d4d4d4"
+            android:fontFamily="serif"
+            android:gravity="center"
+            android:text="Student Information"
+            android:textColor="#000000"
+            android:textSize="17sp"
+            android:textStyle="italic|bold" />
+
+   <TextView
+    android:id="@+id/txtadmissiono"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="20dp"
+    android:text="Admission Number:-"
+       android:layout_below="@+id/txtinfo"
+    android:fontFamily="serif"
+    android:textColor="#25383C"
+    android:textSize="12sp"
+    android:textStyle="italic"  />
+
+        <EditText
+            android:id="@+id/admissionno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/txtadmissionno"
+            android:layout_alignStart="@+id/txtadmissiono"
+            android:layout_alignLeft="@+id/txtadmissiono"
+            android:layout_marginStart="120dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="40dp"
+
+            android:inputType="number"
+            android:singleLine="true"
+            android:textSize="12sp" />
+        <TextView
+            android:id="@+id/txtclass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="100dp"
+            android:layout_below="@+id/txtadmissionno"
+            android:text="Student Class-"
+            android:fontFamily="serif"
+            android:textColor="#25383C"
+            android:textSize="12sp"/>
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="80dp"
+            android:layout_toEndOf="@+id/txtclass"
+            android:fontFamily="serif"
+            android:textSize="12sp"
+            android:textStyle="italic"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/txtclass" />
+
+        <TextView
+            android:id="@+id/txtgender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="30dp"
+            android:layout_below="@+id/txtclass"
+            android:text="Gender-"
+            android:fontFamily="serif"
+            android:textColor="#25383C"
+            android:textSize="12sp"/>
+        <RadioGroup
+            android:id="@+id/radioGroup1"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="140dp"
+            android:layout_toEndOf="@+id/txtgender"
+            android:layout_marginLeft="30dp"
+            android:onClick="onRadioButtonClicked"
+
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_toRightOf="@+id/txtgender">
+
+            <RadioButton
+                android:id="@+id/radio0"
+                android:layout_width="10dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="1"
+                android:text="Male"
+                android:textStyle="italic"
+
+                tools:ignore="OnClick" />
+
+            <RadioButton
+                android:id="@+id/radio1"
+                android:layout_width="10dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp"
+
+                android:textStyle="italic"
+                android:text="Female" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/txtstudentname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:text="Student Name-"
+            android:layout_below="@+id/radioGroup1"
+            android:fontFamily="serif"
+            android:textColor="#25383C"
+            android:textSize="12sp"
+            android:textStyle="italic"  />
+
+        <EditText
+            android:id="@+id/studentname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/radioGroup1"
+            android:layout_alignStart="@+id/radioGroup1"
+            android:layout_alignLeft="@+id/radioGroup1"
+            android:layout_marginStart="37dp"
+            android:layout_marginLeft="200dp"
+            android:layout_marginTop="170dp"/>
+        <TextView
+            android:id="@+id/txtfathername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:text="Father Name-"
+            android:layout_below="@+id/txtstudentname"
+            android:fontFamily="serif"
+            android:textColor="#25383C"
+            android:textSize="12sp"
+            android:textStyle="italic"  />
+
+        <EditText
+            android:id="@+id/fathername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/txtfathername"
+            android:layout_alignStart="@+id/txtfathername"
+            android:layout_alignLeft="@+id/txtfathername"
+            android:layout_marginStart="115dp"
+            android:layout_marginLeft="120dp"
+            android:layout_marginTop="400dp" />
+
+        <TextView
+            android:id="@+id/txtmothername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="25dp"
+            android:text="Mother Name-"
+            android:layout_below="@+id/txtfathername"
+            android:fontFamily="serif"
+            android:textColor="#25383C"
+            android:textSize="12sp"
+            android:textStyle="italic"  />
+
+        <EditText
+            android:id="@+id/mothername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/txtmothername"
+            android:layout_alignStart="@+id/txtmothername"
+            android:layout_alignLeft="@+id/txtmothername"
+            android:layout_marginStart="115dp"
+            android:layout_marginLeft="120dp"
+            android:layout_marginTop="400dp" />
+        <TextView
+            android:id="@+id/txtemail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="25dp"
+            android:text="Email Address-"
+            android:layout_below="@+id/txtmothername"
+            android:fontFamily="serif"
+            android:textColor="#25383C"
+            android:textSize="12sp"
+            android:textStyle="italic"  />
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/txtemail"
+            android:layout_alignStart="@+id/txtemail"
+            android:layout_alignLeft="@+id/txtemail"
+            android:layout_marginStart="115dp"
+            android:layout_marginLeft="120dp"
+            android:layout_marginTop="400dp" />
+        <TextView
+            android:id="@+id/txtfmobile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="25dp"
+            android:text="Mobile No Father-"
+            android:layout_below="@+id/txtemail"
+            android:fontFamily="serif"
+            android:textColor="#25383C"
+            android:textSize="12sp"
+            android:textStyle="italic"  />
+
+        <EditText
+            android:id="@+id/fmobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/txtfmobile"
+            android:layout_alignStart="@+id/txtfmobile"
+            android:layout_alignLeft="@+id/txtfmobile"
+            android:layout_marginStart="115dp"
+            android:layout_marginLeft="120dp"
+            android:layout_marginTop="400dp" />
+
+        <TextView
+            android:id="@+id/txtmmobile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="25dp"
+            android:text="Mobile No Mother-"
+            android:layout_below="@+id/txtfmobile"
+            android:fontFamily="serif"
+            android:textColor="#25383C"
+            android:textSize="12sp"
+            android:textStyle="italic"  />
+
+        <EditText
+            android:id="@+id/mmobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/txtmmobile"
+            android:layout_alignStart="@+id/txtmmobile"
+            android:layout_alignLeft="@+id/txtmmobile"
+            android:layout_marginStart="115dp"
+            android:layout_marginLeft="120dp"
+            android:layout_marginTop="400dp" />
+
+        <TextView
+            android:id="@+id/txtdateofregistration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="25dp"
+            android:text="Date Of Registartion-"
+            android:layout_below="@+id/txtmmobile"
+            android:fontFamily="serif"
+            android:textColor="#25383C"
+            android:textSize="12sp"
+            android:textStyle="italic"  />
+
+        <EditText
+            android:id="@+id/datechoice1"
+            android:layout_width="210dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/txtdateofregistration"
+            android:layout_marginStart="20dp"
+            android:textSize="15sp"
+
+            android:layout_toEndOf="@+id/txtdateofregistration"
+            android:hint="Choose Date"
+            android:inputType="date"
+            android:maxLength="12"
+            android:singleLine="true"
+
+            android:layout_toRightOf="@+id/txtdateofregistration"
+            android:layout_marginLeft="20dp" />
+
+        <TextView
+            android:id="@+id/txtdateoffee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="25dp"
+            android:text="Fee Effective From-"
+            android:layout_below="@+id/txtdateofregistration"
+            android:fontFamily="serif"
+            android:textColor="#25383C"
+            android:textSize="12sp"
+            android:textStyle="italic"  />
+
+        <EditText
+            android:id="@+id/datechoice2"
+            android:layout_width="210dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/txtdateoffee"
+            android:layout_marginStart="20dp"
+            android:textSize="15sp" android:layout_toEndOf="@+id/txtdateoffee"
+            android:hint="Choose Date"
+            android:inputType="date"
+            android:maxLength="12"
+            android:singleLine="true"
+            android:layout_toRightOf="@+id/txtdateoffee"
+            android:layout_marginLeft="25dp" />
+
+
+
+        <Button
+            android:id="@+id/btnsubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="1000dp"
+            android:layout_marginTop="600dp"
+            android:text="Submit"
+            android:background="#d4d4d4"></Button>
+
+
+    </RelativeLayout>
+</ScrollView>
