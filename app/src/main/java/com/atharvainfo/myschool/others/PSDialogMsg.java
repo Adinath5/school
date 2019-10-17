@@ -12,6 +12,7 @@ import android.widget.RatingBar;
 import android.widget.TextView;
 
 import com.atharvainfo.myschool.R;
+import com.atharvainfo.myschool.activity.activity.subject_information;
 
 public class PSDialogMsg {
 
@@ -25,11 +26,14 @@ public class PSDialogMsg {
     public float newRating;
     private boolean attached = false;
 
-    public PSDialogMsg(Activity activity, Boolean cancelable) {
+    public PSDialogMsg(Activity activity) {
 
         this.dialog = new Dialog(activity);
         this.dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         this.cancelable = cancelable;
+    }
+
+    public PSDialogMsg(subject_information subject_information) {
     }
 
     private WindowManager.LayoutParams getLayoutParams(@NonNull Dialog dialog) {
@@ -259,4 +263,12 @@ public class PSDialogMsg {
         return dialog.isShowing();
     }
 
+    public void setMessage(String s) {
+    }
+
+    public void setCancelable(boolean b) {
+    }
+
+    public void dismiss() {
+    }
 }

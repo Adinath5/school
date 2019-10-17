@@ -1,6 +1,5 @@
-package com.atharvainfo.myschool.activity;
+package com.atharvainfo.myschool.activity.activity;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -8,11 +7,11 @@ import android.content.res.Resources;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.res.ResourcesCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.util.Log;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -83,16 +82,16 @@ public class SplashActivity extends AppCompatActivity {
             @Override
             public void run() {
 
+                // Wait given period of time or exit on touch
                 try {
                     synchronized(this){
-                        // Wait given period of time or exit on touch
                         wait(5000);
                     }
                 }
                 catch(InterruptedException ex){
                 }
 
-                Intent intent = new Intent(SplashActivity.this,MainActivity.class);
+                Intent intent = new Intent( SplashActivity.this, book_information.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                 startActivity(intent);
                 SplashActivity.this.finish();

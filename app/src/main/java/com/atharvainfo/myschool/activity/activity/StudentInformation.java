@@ -1,4 +1,4 @@
-package com.atharvainfo.myschool.activity;
+package com.atharvainfo.myschool.activity.activity;
 
 import android.app.DatePickerDialog;
 import android.app.ProgressDialog;
@@ -82,11 +82,6 @@ public class StudentInformation extends AppCompatActivity implements AdapterView
         r2= findViewById (R.id.radio1);
         /*actv(false);*/
         radiogroup.setOnCheckedChangeListener(this);
-
-
-
-
-
         spinnerstd.setOnItemSelectedListener(this);
         ArrayAdapter aa = new ArrayAdapter(this, android.R.layout.simple_spinner_item, unit);
         aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -101,7 +96,7 @@ public class StudentInformation extends AppCompatActivity implements AdapterView
 
             }
         });
-        psDialogMsg = new PSDialogMsg (StudentInformation.this );
+        psDialogMsg = new PSDialogMsg ( StudentInformation.this );
 
         Long currentdate = System.currentTimeMillis();
         String datestring = dateform.format(currentdate);

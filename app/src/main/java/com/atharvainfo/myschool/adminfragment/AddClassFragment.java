@@ -10,7 +10,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.RadioButton;
 
 import com.atharvainfo.myschool.R;
 import com.atharvainfo.myschool.others.ApiInterface;
@@ -57,7 +56,7 @@ public class AddClassFragment extends Fragment {
         btncancel = view.findViewById(R.id.btncancel);
         prefManager = new PrefManager(getContext());
         UserId = prefManager.getUserName().toString();
-        psDialogMsg = new PSDialogMsg(getActivity(), false);
+        psDialogMsg = new PSDialogMsg(getActivity() );
 
 
         btncancel.setOnClickListener(new View.OnClickListener() {

@@ -67,7 +67,7 @@ public class NewClassFragment extends Fragment {
         view = inflater.inflate(R.layout.fragment_new_class, container, false);
 
         connectivity = new ConnectionDetector(getContext());
-        psDialogMsg = new PSDialogMsg(getActivity(),false);
+        psDialogMsg = new PSDialogMsg(getActivity() );
         ClassArrayList = new ArrayList<>();
         ClassList = new ArrayList<HashMap<String, String>>();
         classnamelist = view.findViewById(R.id.news_list);
