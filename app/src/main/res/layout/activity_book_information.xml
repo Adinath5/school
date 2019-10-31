@@ -230,33 +230,20 @@
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:layout_marginLeft="10dp"
-              android:layout_marginTop="25dp"
+              android:layout_marginTop="30dp"
               android:text="Barcode No-"
               android:layout_below="@+id/txtsubject"
               android:fontFamily="serif"
               android:textColor="#25383C"
               android:textSize="14sp"
               android:textStyle="italic"/>
-        <EditText
-            android:id="@+id/barcode"
-            android:maxLength="12"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/txtbarcode"
-            android:layout_alignStart="@+id/txtbarcode"
-            android:layout_alignLeft="@+id/txtbarcode"
-            android:layout_marginStart="107dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="45dp"
-            android:inputType="text"
-            android:singleLine="true"
-            android:textSize="14sp" />
+
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/btn"
             android:text="Scan Barcode or QR code"
-            android:layout_marginTop="470dp"
+            android:layout_marginTop="420dp"
             android:layout_marginStart="120dp"
             android:layout_marginLeft="120dp" />
         <TextView
@@ -264,7 +251,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/tvresult"
             android:textColor="#000"
-            android:layout_marginTop="540dp"
+            android:layout_marginTop="490dp"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:layout_marginStart="125dp"
             android:text="Result will be here"

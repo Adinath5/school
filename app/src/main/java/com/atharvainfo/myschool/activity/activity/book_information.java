@@ -33,7 +33,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class book_information extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
-    EditText txtbookno, txtbookname, txtbookauthor, txtsuppliername, txtpublisher, txtprice,txtbarcode;
+    EditText txtbookno, txtbookname, txtbookauthor, txtsuppliername, txtpublisher, txtprice;
+    TextView txtbarcode;
     public static TextView tvresult;
     private  Button btn;
     Spinner spinnersubject;
@@ -51,6 +52,7 @@ public class book_information extends AppCompatActivity implements AdapterView.O
     };
     String[] unit = {"C and C++ Programming", "Relational Database", "Extreme Python", "Advanced Maths", "Statistics I and II"};
     private DatePickerDialog.OnDateSetListener date;
+    private Object TextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,10 +64,10 @@ public class book_information extends AppCompatActivity implements AdapterView.O
         txtsuppliername = findViewById ( R.id.suppliername );
         txtpublisher = findViewById ( R.id.publishername );
         txtprice = findViewById ( R.id.price );
-        txtbarcode=findViewById ( R.id.barcode );
         spinnersubject.setOnItemSelectedListener ( this );
         ArrayAdapter aa = new ArrayAdapter ( this, android.R.layout.simple_spinner_item, unit );
         aa.setDropDownViewResource ( android.R.layout.simple_spinner_dropdown_item );
+        txtbarcode=findViewById(R.id.tvresult);
         spinnersubject.setAdapter ( aa );
 
         tvresult = (TextView) findViewById(R.id.tvresult);
@@ -146,7 +148,7 @@ public class book_information extends AppCompatActivity implements AdapterView.O
         Bookpublisher=txtpublisher.getText ().toString ();
         Bookprice=   txtprice.getText ().toString ();
         Booksubject = spinnersubject.getSelectedItem ( ).toString ( );
-        Bookbarcode=txtbarcode.getText ().toString ();
+        Bookbarcode=txtbarcode.getText().toString();
         int response = Log.d ( "Response", Bookno.toString ( ) + " " + Bookname.toString ( ) + " " + Bookauther.toString ( ) + " " + Bookdateofissued.toString ( ) + " " + Booksuppliername.toString ( ) + " " + Bookpublisher.toString ( ) + " " + Bookprice.toString ( ) + " " + Booksubject.toString ( ) + "  " + Bookbarcode.toString ( ) );
         Retrofit retrofit = new Retrofit.Builder ( )
                 .baseUrl ( jsonURL )

@@ -13,6 +13,10 @@ public class scanactivity extends AppCompatActivity {
 
     private ZXingScannerView mScannerView;
 
+    public scanactivity(ZXingScannerView mScannerView) {
+        this.mScannerView = mScannerView;
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +26,7 @@ public class scanactivity extends AppCompatActivity {
     @Override
     public void onResume() {
         super.onResume();
-        mScannerView.setResultHandler(this); // Register ourselves as a handler for scan results.
+        mScannerView.setResultHandler((ZXingScannerView.ResultHandler) this); // Register ourselves as a handler for scan results.
         mScannerView.startCamera();          // Start camera on resume
     }
     @Override
@@ -30,19 +34,11 @@ public class scanactivity extends AppCompatActivity {
         super.onPause();
         mScannerView.stopCamera();           // Stop camera on pause
     }
-    
-    @Override
     public void handleResult(Result rawResult) {
-        // Do something with the result here
-        // Log.v("tag", rawResult.getText()); // Prints scan results
-        // Log.v("tag", rawResult.getBarcodeFormat().toString()); // Prints the scan format (qrcode, pdf417 etc.)
-
-        book_information.tvresult.setText(rawResult.getText());
+        book_information.tvresult.setText((CharSequence) rawResult);
         onBackPressed();
 
-        // If you would like to resume scanning, call this method below:
-        //mScannerView.resumeCameraPreview(this);
     }
-  
+
 
 }
