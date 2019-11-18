@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/scrolview1"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#e0e0e0">
+        <TextView
+            android:id="@+id/txtinfo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="13dp"
+            android:background="#d4d4d4"
+            android:fontFamily="serif"
+            android:gravity="center"
+            android:text="Book issued"
+            android:textColor="#000000"
+            android:textSize="17sp"
+            android:textStyle="italic|bold" />
+        <TextView
+            android:id="@+id/txtbookno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="25dp"
+            android:text="Book No-"
+            android:layout_below="@+id/txtinfo"
+            android:fontFamily="serif"
+            android:textColor="#25383C"
+            android:textSize="14sp"
+            android:textStyle="italic"  />
+        <EditText
+            android:id="@+id/bookno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/txtstaffname"
+            android:layout_alignStart="@+id/txtstaffname"
+            android:layout_alignLeft="@+id/txtstaffname"
+            android:layout_marginStart="120dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="45dp"
+            android:inputType="text"
+            android:singleLine="true"
+            android:textSize="14sp" />
+        <TextView
+            android:id="@+id/txtbookname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="25dp"
+            android:text="Book Name-"
+            android:layout_below="@+id/txtbookno"
+            android:fontFamily="serif"
+            android:textColor="#25383C"
+            android:textSize="14sp"
+            android:textStyle="italic"  />
+        <EditText
+            android:id="@+id/bookname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/txtbookname"
+            android:layout_alignStart="@+id/txtbookname"
+            android:layout_alignLeft="@+id/txtbookname"
+            android:layout_marginStart="110dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="160dp"
+            android:inputType="text"
+            android:singleLine="true"
+            android:textSize="14sp" />
+        <TextView
+            android:id="@+id/txtstudentname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="25dp"
+            android:text="Student Name-"
+            android:layout_below="@+id/txtbookname"
+            android:fontFamily="serif"
+            android:textColor="#25383C"
+            android:textSize="14sp"
+            android:textStyle="italic"  />
+        <EditText
+            android:id="@+id/studentname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/txtstudentname"
+            android:layout_alignStart="@+id/txtstudentname"
+            android:layout_alignLeft="@+id/txtstudentname"
+            android:layout_marginStart="110dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="45dp"
+            android:inputType="text"
+            android:singleLine="true"
+            android:textSize="14sp" />
+        <TextView
+            android:id="@+id/txtdateofissued"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="25dp"
+            android:text="Date of issued-"
+            android:layout_below="@+id/txtstudentname"
+            android:fontFamily="serif"
+            android:textColor="#25383C"
+            android:textSize="14sp"
+            android:textStyle="italic"  />
+        <EditText
+            android:id="@+id/datechoice1"
+            android:layout_width="300dp"
+            android:layout_marginTop="270dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/txtdateofissued"
+            android:layout_marginStart="14dp"
+            android:textSize="15sp" android:layout_toEndOf="@+id/txtdateofissued"
+            android:hint="Choose Date"
+            android:inputType="date"
+            android:maxLength="12"
+            android:singleLine="true"
+            android:layout_toRightOf="@+id/txtdateoffee"
+            android:layout_marginLeft="50dp" />
+        <Button
+            android:id="@+id/btnsubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="250dp"
+            android:text="Submit"
+            android:background="#d4d4d4"/>
+    </RelativeLayout>
+</ScrollView>

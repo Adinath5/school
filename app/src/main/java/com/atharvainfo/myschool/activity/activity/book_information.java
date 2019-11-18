@@ -69,11 +69,8 @@ public class book_information extends AppCompatActivity implements AdapterView.O
         aa.setDropDownViewResource ( android.R.layout.simple_spinner_dropdown_item );
         txtbarcode=findViewById(R.id.tvresult);
         spinnersubject.setAdapter ( aa );
-
         tvresult = (TextView) findViewById(R.id.tvresult);
-
         btn = (Button) findViewById(R.id.btn);
-
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -87,9 +84,9 @@ public class book_information extends AppCompatActivity implements AdapterView.O
             public void onClick(View v) {
 
                 // doUpdate();
-
             }
         } );
+
         psDialogMsg = new PSDialogMsg ( book_information.this );
         datechoice1 = findViewById ( R.id.datechoice1 );
         Long currentdate = System.currentTimeMillis ( );
@@ -167,10 +164,10 @@ public class book_information extends AppCompatActivity implements AdapterView.O
                     //prefManager.setUserName(user.getUsername().toString());
                     //prefManager.setPContact(user.getPhone().toString());
                     //goToProfile();
-                    psDialogMsg.showInfoDialog ( "Staff Name Added Successfully.", "Ok" );
+                    psDialogMsg.showInfoDialog ( "Book Name Added Successfully.", "Ok" );
                     psDialogMsg.show ( );
                 } else {
-                    psDialogMsg.showInfoDialog ( "Staff Name Not Added Successfully.", "Ok" );
+                    psDialogMsg.showInfoDialog ( "Book Name Not Added Successfully.", "Ok" );
                     psDialogMsg.show ( );
                 }
             }

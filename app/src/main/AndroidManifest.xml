@@ -124,7 +124,6 @@
         android:smallScreens="true"
         android:xlargeScreens="true" />
 
-
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="com.atharvainfo.leader.permission.MAPS_RECEIVE" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
@@ -151,7 +150,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Base.PSTheme">
-        <activity android:name=".activity.activity.scanactivity"></activity>
+        <activity android:name=".activity.activity.book_returned"></activity>
+        <activity android:name=".activity.activity.book_issued" />
+        <activity android:name=".activity.activity.scanactivity" />
         <activity android:name=".activity.activity.book_information">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

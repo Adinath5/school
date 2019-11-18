@@ -53,5 +53,18 @@ public interface ApiInterface<Staffemail> {
                                         @Field("Bookprice") String bookprice,
                                         @Field("Booksubject") String booksubject,
                                         @Field("Bookbarcode") String bookbarcode);
+    @FormUrlEncoded
+    @POST("api.php?apicall=addNewBookIssued")
+    Call<ServerResponse> addbookissued (@Field("Bookno") String bookno,
+                                        @Field("Bookname") String bookname,
+                                        @Field("Studentname") String studentname,
+                                        @Field("Dateofissued.") String dateofissued);
+
+    @FormUrlEncoded
+    @POST("api.php?apicall=addNewBookReturned")
+    Call<ServerResponse> addbookreturned (@Field("Bookno") String bookno,
+                                        @Field("Bookname") String bookname,
+                                        @Field("Studentname") String studentname,
+                                        @Field("Dateofreturned.") String dateofreturned);
 
 }
